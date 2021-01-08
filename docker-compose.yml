@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  yaml_cv:
+    build: .
+    command: -i /work/cv.yml -s /work/style.txt -o /work/cv.pdf
+    volumes:
+      - ./:/work
