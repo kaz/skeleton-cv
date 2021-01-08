@@ -11,6 +11,7 @@ RUN gem install prawn
 
 COPY --from=0 *.rb /opt/yaml_cv/
 COPY --from=0 *.ttf /opt/yaml_cv/fonts/
+COPY --from=0 IPA_Font_License_Agreement_v1.0.txt /opt/yaml_cv/fonts/
 
 WORKDIR /opt/yaml_cv
 ENTRYPOINT ["ruby", "make_cv.rb"]
